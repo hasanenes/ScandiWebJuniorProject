@@ -22,8 +22,8 @@ $productsHandler->massDeleteProducts($_POST);
 <form action="" method="post">
     <header>
         <h1>Product List</h1>
-        <Button type='button' onclick="window.location.href='add-product.php'">add</Button>
-        <Button type="submit">Mass Delete</Button>
+        <Button type='button' onclick="window.location.href='add-product.php'">ADD</Button>
+        <Button type="submit">MASS DELETE</Button>
     </header>
 
     <div id="ultra-main">
