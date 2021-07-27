@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     `
                 } else if (value === 'Book') {
                     specific.innerHTML = '<p>Please provide weight:</p> <input id="weight" type="number" name="weight"><span>KG</span>        <span class="error"> <?php echo $weightErr; ?></span> '
-                } else if (value === 'Dvd') {
+                } else if (value === 'DVD') {
                     specific.innerHTML = '<p>Please provide size:</p> <input id="size" type="number min=0" name="size"><span>MB</span>         <span class="error"> <?php echo $sizeErr; ?></span>'
                 }
 

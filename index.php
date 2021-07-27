@@ -2,9 +2,9 @@
 /**
  * @var ProductsHandler $productsHandler
  */
-include_once './includes/settings.php';
-include_once './includes/autoload.php';
-include_once './includes/products-handler.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/settings.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/autoload.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/products-handler.php';
 $productsHandler->massDeleteProducts($_POST);
 ?>
 <!DOCTYPE html>

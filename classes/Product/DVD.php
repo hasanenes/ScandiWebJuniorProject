@@ -2,7 +2,7 @@
 
 namespace Product;
 
-class Dvd extends Product
+class DVD extends Product
 {
     public $size;
 

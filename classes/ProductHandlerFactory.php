@@ -1,20 +1,20 @@
 <?php
 
 use Handler\BookHandler;
-use Handler\DvdHandler;
+use Handler\DVDHandler;
 use Handler\FurnitureHandler;
 
 class ProductHandlerFactory
 {
-    public static function makeProductHandler($productType, $db): FurnitureHandler|BookHandler|DvdHandler
+    public static function makeProductHandler($productType, $db): FurnitureHandler|BookHandler|DVDHandler
     {
         $productHandler = null;
         if ($productType === 'Book') {
             $productHandler = new Handler\BookHandler($db);
         }
 
-        if ($productType === 'Dvd') {
-            $productHandler = new Handler\DvdHandler($db);
+        if ($productType === 'DVD') {
+            $productHandler = new Handler\DVDHandler($db);
         }
 
         if ($productType === 'Furniture') {

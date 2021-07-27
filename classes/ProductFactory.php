@@ -3,12 +3,12 @@
 
 // properties contain POST
 use Product\Book;
-use Product\Dvd;
+use Product\DVD;
 use Product\Furniture;
 
 class ProductFactory
 {
-    public static function makeProduct($productType, $properties): Dvd|Furniture|Book
+    public static function makeProduct($productType, $properties): DVD|Furniture|Book
     {
         $product = null;
         if ($productType === 'Book') {
@@ -20,8 +20,8 @@ class ProductFactory
             );
         }
 
-        if ($productType === 'Dvd') {
-            $product = new Product\Dvd(
+        if ($productType === 'DVD') {
+            $product = new Product\DVD(
                 $properties['sku'],
                 $properties['name'],
                 $properties['price'],

@@ -4,14 +4,14 @@ namespace Handler;
 
 use PDO;
 
-class DvdHandler extends ProductHandler
+class DVDHandler extends ProductHandler
 {
     protected $db;
 
     public function __construct($db)
     {
         $this->db = $db;
-        $createDvdTable = "CREATE TABLE if not exists dvd(
+        $createDVDTable = "CREATE TABLE if not exists dvd(
                     id int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
                     sku varchar(256) NOT NULL UNIQUE,
                     name varchar(256) NOT NULL,
@@ -19,7 +19,7 @@ class DvdHandler extends ProductHandler
                     size decimal NOT NULL 
                      )";
 
-        $this->db->conn->query($createDvdTable);
+        $this->db->conn->query($createDVDTable);
     }
 
     public function addProduct($product)
@@ -41,12 +41,12 @@ class DvdHandler extends ProductHandler
     {
 
         $rawResult = $this->db->conn->query('SELECT * FROM `dvd`');
-        return $rawResult->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, "Product\Dvd", [0, 0, 0, 0]);
+        return $rawResult->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, "Product\DVD", [0, 0, 0, 0]);
     }
 
     public function getTypeName(): string
     {
-        return 'Dvd';
+        return 'DVD';
     }
 
     public function deleteBySku($sku)
